@@ -10,7 +10,14 @@ Developed to expose the PokeApi.co through the WP-REST-API
 ```
 
 ## theme/pokeTheme
-Developed to include `my_pokemon_ids` as new user metadata field
+Developed to include `my_pokemon_ids` as new user metadata field. Add the following code into your current theme under `functions.php` file
+```
+register_meta('user', 'my_pokemon_ids', array(
+    "type" => "string",
+    "show_in_rest" => true,
+    "single" => true
+));
+```
 
 
 ## Requirements 
